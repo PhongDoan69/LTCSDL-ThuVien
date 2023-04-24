@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "LoaiSanPham";
+    var loaiSach = ViewData["loaisach"] as IEnumerable<LTCSDL_WebThuVien.Models.LoaiSach>;
+}
+
+@foreach (var item in loaiSach)
+{
+    <h3>@item.MaLoaiSach</h3>
+    <h2>@item.TenLoaiSach</h2>
+}

@@ -1,5 +1,7 @@
-﻿@{
+﻿@model IEnumerable<LTCSDL_WebThuVien.Models.Sach>
+@{
     ViewBag.Title = "Home Page";
+    var sach = ViewData["sach"] as IEnumerable<LTCSDL_WebThuVien.Models.Sach>;
 }
 
 <main>
@@ -30,4 +32,8 @@
             <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
         </section>
     </div>
+    @foreach (var item in sach)
+    {
+        <h2>@item.TenSach</h2>
+    }
 </main>
